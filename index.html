@@ -4,190 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn ethical hacking and cybersecurity skills with CyberSecure. Online courses and earning opportunities.">
-    <meta name="keywords" content="ethical hacking, cybersecurity, online courses, bug bounty, penetration testing">
+    <meta name="keywords" content="ethical hacking, cybersecurity, online courses, bug bounty, penetration testing, color trading">
     <title>CyberSecure - Ethical Hacking & Cybersecurity Knowledge</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        :root {
-            --primary-bg: #0a0a0a;
-            --secondary-bg: #1a1a1a;
-            --card-bg: #1e1e1e;
-            --accent-green: #00ff88;
-            --accent-purple: #8b5cf6;
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0a0;
-            --border-color: #333333;
-            --gradient-primary: linear-gradient(135deg, var(--accent-green), var(--accent-purple));
-            --gradient-card: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(139, 92, 246, 0.1));
-        }
-
+        /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: var(--text-primary);
-            background: var(--primary-bg);
-            overflow-x: hidden;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-
-        /* Animated Background */
-        .animated-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #0a0a0a, #1a1a1a, #0a0a0a);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-            z-index: -2;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
+        
         /* Navigation */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            background: rgba(26, 26, 26, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            position: fixed;
             top: 0;
-            z-index: 100;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
         }
 
         .navbar.scrolled {
-            background: rgba(10, 10, 10, 0.98);
-            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.1);
+            background: rgba(44, 62, 80, 0.95);
+            backdrop-filter: blur(10px);
         }
-
+        
         .logo {
             display: flex;
             align-items: center;
             font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-weight: bold;
         }
-
-        .logo::before {
-            content: "🛡️";
-            margin-right: 0.5rem;
-            -webkit-text-fill-color: var(--accent-green);
+        
+        .logo i {
+            margin-right: 10px;
+            color: #3498db;
+            font-size: 2rem;
         }
-
+        
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
         }
-
+        
         .nav-links a {
-            color: var(--text-secondary);
+            color: white;
             text-decoration: none;
             padding: 0.5rem 1rem;
-            border-radius: 8px;
             transition: all 0.3s ease;
-            position: relative;
+            border-radius: 5px;
         }
-
+        
         .nav-links a:hover {
-            color: var(--accent-green);
-            background: rgba(0, 255, 136, 0.1);
+            background: rgba(52, 152, 219, 0.2);
+            color: #3498db;
         }
-
+        
         .burger {
             display: none;
             cursor: pointer;
-            flex-direction: column;
-            gap: 4px;
         }
-
+        
         .burger div {
             width: 25px;
             height: 3px;
-            background: var(--accent-green);
-            border-radius: 2px;
+            background-color: white;
+            margin: 5px;
             transition: all 0.3s ease;
         }
-
+        
         /* Hero Section */
         .hero {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 6rem 2rem;
-            min-height: 90vh;
-            position: relative;
-            overflow: hidden;
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
         }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
-            z-index: -1;
-        }
-
+        
         .hero-content {
             flex: 1;
             padding-right: 2rem;
-            animation: fadeInUp 1s ease;
         }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            max-width: 500px;
-        }
-
+        
         .hero-image {
             flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            animation: fadeInRight 1s ease;
+            text-align: center;
         }
-
-        .hero-image::before {
-            content: "🔐";
+        
+        .hero-image i {
             font-size: 15rem;
-            opacity: 0.8;
+            color: rgba(255,255,255,0.1);
             animation: float 3s ease-in-out infinite;
         }
 
@@ -195,216 +118,241 @@
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
         }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInRight {
-            from { opacity: 0; transform: translateX(30px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-right: 1rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .primary {
-            background: var(--gradient-primary);
-            color: var(--primary-bg);
-            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
-        }
-
-        .primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
-        }
-
-        .secondary {
-            background: transparent;
-            color: var(--accent-green);
-            border: 2px solid var(--accent-green);
-        }
-
-        .secondary:hover {
-            background: var(--accent-green);
-            color: var(--primary-bg);
-            transform: translateY(-2px);
-        }
-
-        /* Sections */
-        .section {
-            padding: 6rem 2rem;
-            position: relative;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: var(--gradient-primary);
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #3498db);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .primary {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+        }
+        
+        .primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.6);
+        }
+        
+        .secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid #3498db;
+        }
+        
+        .secondary:hover {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Sections */
+        .section {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        
+        .dark {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+        }
 
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            border-radius: 2px;
+        }
+        
         /* Content Grid */
         .content-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
-
+        
         .content-card {
-            background: var(--card-bg);
-            border-radius: 16px;
+            background: white;
+            border-radius: 15px;
             overflow: hidden;
-            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             position: relative;
         }
-
+        
+        .content-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
         .content-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            background: var(--gradient-card);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1;
+            height: 4px;
+            background: linear-gradient(45deg, #3498db, #2980b9);
         }
-
-        .content-card:hover::before {
-            opacity: 1;
-        }
-
-        .content-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent-green);
-            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.1);
-        }
-
-        .content-card > * {
-            position: relative;
-            z-index: 2;
-        }
-
+        
         .content-card h3 {
             padding: 1.5rem 1.5rem 0;
-            font-size: 1.3rem;
-            color: var(--accent-green);
+            color: #2c3e50;
         }
-
+        
         .content-card p {
-            padding: 1rem 1.5rem;
-            color: var(--text-secondary);
+            padding: 0 1.5rem 1.5rem;
+            color: #666;
         }
 
-        .tools-list {
-            padding: 0 1.5rem;
-            list-style: none;
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        .tools-list li {
-            margin-bottom: 0.5rem;
-        }
-
-        .tool-link {
-            color: var(--accent-purple);
-            text-decoration: none;
-            padding: 0.5rem;
-            border-radius: 6px;
+        .tool-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            display: inline-block;
-            font-family: 'Fira Code', monospace;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
 
-        .tool-link:hover {
-            background: rgba(139, 92, 246, 0.1);
-            color: var(--accent-green);
-            transform: translateX(5px);
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
         }
 
-        .read-more {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            margin: 0 1.5rem 1.5rem;
-            color: var(--accent-green);
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 8px;
-            transition: all 0.3s ease;
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
-        .read-more:hover {
-            background: rgba(0, 255, 136, 0.1);
+        .tool-card i {
+            font-size: 3rem;
+            color: #e74c3c;
+            margin-bottom: 1rem;
         }
 
+        .tool-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .tool-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Advanced Tools Section */
+        .advanced-tools {
+            background: linear-gradient(135deg, #8360c3 0%, #2ebf91 100%);
+        }
+
+        .advanced-tools .tool-card::before {
+            background: linear-gradient(45deg, #8360c3, #2ebf91);
+        }
+
+        .advanced-tools .tool-card i {
+            color: #8360c3;
+        }
+
+        /* Mobile Forensics Tools */
+        .mobile-forensics {
+            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+        }
+
+        .mobile-forensics .tool-card::before {
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+        }
+
+        .mobile-forensics .tool-card i {
+            color: #ff6b6b;
+        }
+        
         /* Tabs */
         .tabs {
             max-width: 1000px;
             margin: 0 auto;
         }
-
+        
         .tab-header {
             display: flex;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
             margin-bottom: 2rem;
         }
-
+        
         .tab-header div {
             padding: 1rem 2rem;
             cursor: pointer;
             border-bottom: 3px solid transparent;
             transition: all 0.3s ease;
-            color: var(--text-secondary);
+            color: rgba(255,255,255,0.7);
         }
-
+        
         .tab-header .active {
-            border-bottom: 3px solid var(--accent-green);
-            color: var(--accent-green);
-            font-weight: 600;
+            border-bottom: 3px solid #3498db;
+            color: white;
+            font-weight: bold;
         }
-
+        
+        .tab-content {
+            padding: 2rem 0;
+        }
+        
         .tab-content > div {
             display: none;
-            animation: fadeInUp 0.5s ease;
         }
-
+        
         .tab-content > .active {
             display: block;
         }
@@ -414,16 +362,17 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
-
+        
         .earning-card {
-            background: var(--card-bg);
+            background: white;
             padding: 2rem;
-            border-radius: 16px;
+            border-radius: 15px;
             text-align: center;
-            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            color: #333;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -432,46 +381,171 @@
         .earning-card::before {
             content: '';
             position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: var(--gradient-primary);
-            border-radius: 16px;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .earning-card:hover::before {
-            opacity: 1;
-            animation: rotate 2s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
         }
 
         .earning-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
-
-        .earning-card .icon {
+        
+        .earning-card i {
             font-size: 3rem;
+            color: #2ecc71;
             margin-bottom: 1rem;
         }
-
+        
         .earning-card h3 {
             margin-bottom: 1rem;
-            color: var(--accent-green);
+            color: #2c3e50;
         }
-
+        
         .earning-card p {
             margin-bottom: 1.5rem;
-            color: var(--text-secondary);
+            color: #666;
         }
 
+        /* Color Trading Cards */
+        .color-trading-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+
+        .trading-platform {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .trading-platform::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb);
+        }
+
+        .trading-platform:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .platform-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .platform-header h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .bonus-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .platform-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .platform-features li {
+            padding: 0.5rem 0;
+            color: #666;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .platform-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #2ecc71;
+            font-weight: bold;
+        }
+
+        .trading-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .trading-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .trading-info {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .color-demo {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .color-option {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .color-red { background: linear-gradient(45deg, #e74c3c, #c0392b); }
+        .color-green { background: linear-gradient(45deg, #2ecc71, #27ae60); }
+        .color-violet { background: linear-gradient(45deg, #9b59b6, #8e44ad); }
+
+        .color-option:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn.small {
+            padding: 0.7rem 1.5rem;
+            font-size: 0.9rem;
+        }
+        
         /* Contact Form */
         .contact-container {
             display: grid;
@@ -480,79 +554,83 @@
             max-width: 1000px;
             margin: 0 auto;
         }
-
+        
         .contact-form {
             display: grid;
-            gap: 1rem;
+            gap: 1.5rem;
         }
-
+        
         .contact-form input,
         .contact-form textarea {
             padding: 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            background: var(--card-bg);
-            color: var(--text-primary);
-            font-family: inherit;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            width: 100%;
             transition: all 0.3s ease;
         }
 
         .contact-form input:focus,
         .contact-form textarea:focus {
             outline: none;
-            border-color: var(--accent-green);
-            box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.1);
+            border-color: #3498db;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
         }
-
+        
         .contact-form textarea {
             min-height: 150px;
             resize: vertical;
         }
-
-        .contact-info h3 {
-            margin-bottom: 2rem;
-            color: var(--accent-green);
+        
+        .contact-info {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
         }
-
+        
         .contact-info p {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
-            color: var(--text-secondary);
         }
-
-        .contact-info .icon {
+        
+        .contact-info i {
             margin-right: 1rem;
-            color: var(--accent-green);
-            width: 20px;
+            color: #3498db;
+            font-size: 1.2rem;
         }
-
+        
         .social-links {
             display: flex;
             gap: 1rem;
             margin-top: 2rem;
         }
-
+        
         .social-links a {
-            color: var(--text-secondary);
+            color: white;
             font-size: 1.5rem;
             transition: all 0.3s ease;
-            padding: 0.5rem;
-            border-radius: 8px;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
+        
         .social-links a:hover {
-            color: var(--accent-green);
-            background: rgba(0, 255, 136, 0.1);
+            background: #3498db;
+            transform: translateY(-3px);
         }
-
+        
         /* Footer */
         footer {
-            background: var(--secondary-bg);
-            border-top: 1px solid var(--border-color);
+            background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+            color: white;
             padding: 3rem 2rem 1rem;
         }
-
+        
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -560,154 +638,135 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
+        
         .footer-section h3 {
             margin-bottom: 1.5rem;
-            color: var(--accent-green);
+            font-size: 1.2rem;
+            color: #3498db;
         }
-
+        
         .footer-section ul {
             list-style: none;
         }
-
+        
         .footer-section ul li {
             margin-bottom: 0.5rem;
         }
-
+        
         .footer-section ul li a {
-            color: var(--text-secondary);
+            color: #bdc3c7;
             text-decoration: none;
             transition: all 0.3s ease;
         }
-
+        
         .footer-section ul li a:hover {
-            color: var(--accent-green);
+            color: #3498db;
         }
-
+        
         .newsletter-form {
             display: flex;
-            gap: 0.5rem;
+            margin-top: 1rem;
         }
-
+        
         .newsletter-form input {
             flex: 1;
             padding: 0.8rem;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            background: var(--card-bg);
-            color: var(--text-primary);
+            border: none;
+            border-radius: 5px 0 0 5px;
         }
-
+        
         .newsletter-form button {
             padding: 0.8rem 1.5rem;
-            background: var(--gradient-primary);
-            color: var(--primary-bg);
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 0 5px 5px 0;
             cursor: pointer;
-            font-weight: 600;
             transition: all 0.3s ease;
         }
 
         .newsletter-form button:hover {
-            transform: translateY(-2px);
+            background: linear-gradient(45deg, #2980b9, #3498db);
         }
-
+        
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
             margin-top: 2rem;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-secondary);
+            border-top: 1px solid #34495e;
         }
-
-        /* Enhanced Popup Styles */
+        
+        /* Popup */
         .popup-overlay {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.8);
             display: none;
             justify-content: center;
             align-items: center;
-            z-index: 1000;
-            animation: fadeIn 0.3s ease;
+            z-index: 2000;
+            backdrop-filter: blur(5px);
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
+        
         .popup-content {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
+            background: white;
+            padding: 0;
+            border-radius: 20px;
             max-width: 800px;
             width: 90%;
             max-height: 90vh;
             overflow-y: auto;
             position: relative;
-            animation: slideUp 0.3s ease;
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
         }
 
         .popup-header {
-            padding: 2rem 2rem 1rem;
-            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px 20px 0 0;
             position: relative;
         }
 
         .popup-header h2 {
-            color: var(--accent-green);
+            margin: 0;
             font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            font-family: 'Fira Code', monospace;
         }
 
         .popup-header .tool-category {
-            color: var(--accent-purple);
+            opacity: 0.8;
             font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-top: 0.5rem;
         }
-
+        
         .close-popup {
             position: absolute;
             top: 1rem;
-            right: 1.5rem;
+            right: 1rem;
             font-size: 2rem;
             cursor: pointer;
-            color: var(--text-secondary);
-            transition: all 0.3s ease;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
             width: 40px;
             height: 40px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
+            transition: all 0.3s ease;
         }
 
         .close-popup:hover {
-            color: var(--accent-green);
-            background: rgba(0, 255, 136, 0.1);
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
         }
 
         .popup-body {
             padding: 2rem;
-        }
-
-        .tool-description {
-            margin-bottom: 2rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
+            color: #333;
         }
 
         .tool-section {
@@ -715,38 +774,20 @@
         }
 
         .tool-section h3 {
-            color: var(--accent-green);
+            color: #2c3e50;
             margin-bottom: 1rem;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
         }
 
         .tool-section h3::before {
-            content: "▶";
-            color: var(--accent-purple);
-        }
-
-        .command-block {
-            background: var(--primary-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1rem;
-            margin: 1rem 0;
-            font-family: 'Fira Code', monospace;
-            position: relative;
-            overflow-x: auto;
-        }
-
-        .command-block::before {
-            content: "$ ";
-            color: var(--accent-green);
-            font-weight: bold;
-        }
-
-        .command-block code {
-            color: var(--text-primary);
+            content: '';
+            width: 4px;
+            height: 20px;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            margin-right: 1rem;
+            border-radius: 2px;
         }
 
         .feature-list {
@@ -756,168 +797,97 @@
 
         .feature-list li {
             padding: 0.5rem 0;
-            color: var(--text-secondary);
             position: relative;
-            padding-left: 1.5rem;
+            padding-left: 2rem;
+            color: #666;
         }
 
         .feature-list li::before {
-            content: "✓";
-            color: var(--accent-green);
+            content: '🔹';
             position: absolute;
             left: 0;
-            font-weight: bold;
+        }
+
+        .command-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+            font-family: 'Courier New', monospace;
+            position: relative;
+            overflow-x: auto;
+        }
+
+        .command-block::before {
+            content: '$';
+            color: #3498db;
+            margin-right: 0.5rem;
         }
 
         .use-case {
-            background: rgba(139, 92, 246, 0.1);
-            border-left: 4px solid var(--accent-purple);
-            padding: 1rem;
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
             margin: 1rem 0;
-            border-radius: 0 8px 8px 0;
+            border-left: 4px solid #3498db;
         }
 
         .use-case h4 {
-            color: var(--accent-purple);
+            color: #2c3e50;
             margin-bottom: 0.5rem;
         }
 
         .warning-box {
-            background: rgba(255, 193, 7, 0.1);
-            border: 1px solid #ffc107;
-            border-radius: 8px;
-            padding: 1rem;
-            margin: 1rem 0;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
         }
 
         .warning-box h4 {
-            color: #ffc107;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
         }
 
         .warning-box h4::before {
-            content: "⚠️";
+            content: '⚠️';
+            margin-right: 0.5rem;
         }
-
+        
         .whatsapp-cta {
             margin-top: 2rem;
             text-align: center;
-            padding: 1.5rem;
-            background: var(--gradient-card);
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
+            padding: 2rem;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-radius: 15px;
+            color: white;
         }
-
+        
         .whatsapp-btn {
             display: inline-block;
-            background: #25D366;
+            background: rgba(255, 255, 255, 0.2);
             color: white;
             padding: 1rem 2rem;
-            border-radius: 12px;
+            border-radius: 50px;
             text-decoration: none;
             margin-top: 1rem;
-            font-weight: 600;
+            font-weight: bold;
             transition: all 0.3s ease;
         }
 
         .whatsapp-btn:hover {
-            background: #128C7E;
+            background: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
         }
-
-        .whatsapp-btn::before {
-            content: "💬";
+        
+        .whatsapp-btn i {
             margin-right: 0.5rem;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                position: absolute;
-                right: 0;
-                top: 100%;
-                background: rgba(26, 26, 26, 0.98);
-                backdrop-filter: blur(10px);
-                flex-direction: column;
-                width: 100%;
-                align-items: center;
-                padding: 2rem 0;
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease;
-                border-top: 1px solid var(--border-color);
-            }
-
-            .nav-links.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .burger {
-                display: flex;
-            }
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding: 4rem 1rem;
-            }
-
-            .hero-content {
-                padding-right: 0;
-                margin-bottom: 2rem;
-            }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-
-            .tab-header {
-                flex-direction: column;
-            }
-
-            .popup-content {
-                width: 95%;
-                margin: 1rem;
-            }
-
-            .popup-header,
-            .popup-body {
-                padding: 1.5rem;
-            }
-
-            .command-block {
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .btn {
-                margin-right: 0;
-                margin-bottom: 1rem;
-                width: 100%;
-                text-align: center;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-            }
-
-            .newsletter-form input {
-                margin-bottom: 0.5rem;
-            }
-        }
-
-        /* Scroll animations */
+        /* Animations */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -928,19 +898,158 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 70px;
+                background: linear-gradient(135deg, #2c3e50, #34495e);
+                flex-direction: column;
+                width: 100%;
+                height: calc(100vh - 70px);
+                align-items: center;
+                justify-content: flex-start;
+                padding: 2rem 0;
+                transition: right 0.3s ease;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            
+            .burger {
+                display: block;
+            }
+
+            .burger.toggle .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .burger.toggle .line2 {
+                opacity: 0;
+            }
+
+            .burger.toggle .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+            
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 6rem 1rem 2rem;
+            }
+            
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero-image i {
+                font-size: 8rem;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .tab-header {
+                flex-wrap: wrap;
+            }
+            
+            .tab-header div {
+                flex: 1;
+                min-width: 120px;
+                text-align: center;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .color-trading-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .popup-content {
+                width: 95%;
+                margin: 1rem;
+            }
+
+            .popup-header {
+                padding: 1.5rem;
+            }
+
+            .popup-body {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .btn {
+                margin-right: 0;
+                margin-bottom: 1rem;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-form input {
+                border-radius: 5px;
+                margin-bottom: 0.5rem;
+            }
+            
+            .newsletter-form button {
+                border-radius: 5px;
+            }
+
+            .color-demo {
+                flex-wrap: wrap;
+            }
+
+            .color-option {
+                width: 60px;
+                height: 60px;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="animated-bg"></div>
-
     <!-- Navigation Bar -->
     <nav class="navbar" id="navbar">
-        <div class="logo">CyberSecure</div>
+        <div class="logo">
+            <i class="fas fa-shield-alt"></i>
+            <span>CyberSecure</span>
+        </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#ethical-hacking">Ethical Hacking</a></li>
+            <li><a href="#advanced-tools">Advanced Tools</a></li>
+            <li><a href="#mobile-forensics">Mobile Forensics</a></li>
             <li><a href="#cybersecurity">Cybersecurity</a></li>
             <li><a href="#online-earning">Online Earning</a></li>
+            <li><a href="#courses">Courses</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="burger">
@@ -952,68 +1061,215 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-content fade-in">
             <h1>Master Cybersecurity & Ethical Hacking</h1>
-            <p>Learn cutting-edge security techniques and earn through ethical hacking. Join the next generation of cybersecurity professionals.</p>
+            <p>Learn advanced security techniques, discover vulnerabilities, and earn money through ethical hacking and color trading</p>
             <div class="cta-buttons">
-                <a href="#ethical-hacking" class="btn primary">Start Learning</a>
+                <a href="#courses" class="btn primary">Start Learning</a>
                 <a href="#online-earning" class="btn secondary">Earning Opportunities</a>
             </div>
         </div>
-        <div class="hero-image"></div>
+        <div class="hero-image fade-in">
+            <i class="fas fa-user-secret"></i>
+        </div>
     </section>
 
     <!-- Ethical Hacking Section -->
     <section id="ethical-hacking" class="section fade-in">
-        <h2 class="section-title">Ethical Hacking Arsenal</h2>
-        <div class="content-grid">
-            <div class="content-card">
-                <h3>🎯 What is Ethical Hacking?</h3>
-                <p>Ethical hacking involves authorized security testing to identify vulnerabilities before malicious hackers do. It's a crucial practice for maintaining robust cybersecurity defenses.</p>
-                <a href="#" class="read-more">Learn More</a>
+        <h2 class="section-title">Popular Ethical Hacking Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card" data-tool="nmap">
+                <i class="fas fa-network-wired"></i>
+                <h3>Nmap</h3>
+                <p>Network discovery and security auditing tool</p>
             </div>
-            <div class="content-card">
-                <h3>🛠️ Popular Ethical Hacking Tools</h3>
-                <div class="tools-list">
-                    <li><a href="#" class="tool-link" data-tool="nmap">Nmap - Network Scanner</a></li>
-                    <li><a href="#" class="tool-link" data-tool="metasploit">Metasploit - Exploitation Framework</a></li>
-                    <li><a href="#" class="tool-link" data-tool="wireshark">Wireshark - Network Analyzer</a></li>
-                    <li><a href="#" class="tool-link" data-tool="burp">Burp Suite - Web Security</a></li>
-                    <li><a href="#" class="tool-link" data-tool="john">John the Ripper - Password Cracker</a></li>
-                    <li><a href="#" class="tool-link" data-tool="sqlmap">SQLMap - SQL Injection</a></li>
-                    <li><a href="#" class="tool-link" data-tool="aircrack">Aircrack-ng - WiFi Security</a></li>
-                    <li><a href="#" class="tool-link" data-tool="hydra">Hydra - Login Cracker</a></li>
-                </div>
-                <a href="#" class="read-more">Explore All Tools</a>
+            <div class="tool-card" data-tool="metasploit">
+                <i class="fas fa-rocket"></i>
+                <h3>Metasploit</h3>
+                <p>Penetration testing framework</p>
+            </div>
+            <div class="tool-card" data-tool="wireshark">
+                <i class="fas fa-eye"></i>
+                <h3>Wireshark</h3>
+                <p>Network protocol analyzer</p>
+            </div>
+            <div class="tool-card" data-tool="burpsuite">
+                <i class="fas fa-bug"></i>
+                <h3>Burp Suite</h3>
+                <p>Web application security testing</p>
+            </div>
+            <div class="tool-card" data-tool="johntheripper">
+                <i class="fas fa-key"></i>
+                <h3>John the Ripper</h3>
+                <p>Password cracking tool</p>
+            </div>
+            <div class="tool-card" data-tool="sqlmap">
+                <i class="fas fa-database"></i>
+                <h3>SQLMap</h3>
+                <p>SQL injection testing tool</p>
+            </div>
+            <div class="tool-card" data-tool="aircrackng">
+                <i class="fas fa-wifi"></i>
+                <h3>Aircrack-ng</h3>
+                <p>WiFi security auditing suite</p>
+            </div>
+            <div class="tool-card" data-tool="nikto">
+                <i class="fas fa-search"></i>
+                <h3>Nikto</h3>
+                <p>Web server scanner</p>
+            </div>
+            <div class="tool-card" data-tool="hydra">
+                <i class="fas fa-water"></i>
+                <h3>Hydra</h3>
+                <p>Login brute-forcer</p>
+            </div>
+            <div class="tool-card" data-tool="owasp-zap">
+                <i class="fas fa-shield-virus"></i>
+                <h3>OWASP ZAP</h3>
+                <p>Web application security scanner</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Tools Section -->
+    <section id="advanced-tools" class="section advanced-tools fade-in">
+        <h2 class="section-title">Advanced Penetration Testing Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card" data-tool="cobaltstrike">
+                <i class="fas fa-crosshairs"></i>
+                <h3>Cobalt Strike</h3>
+                <p>Advanced threat emulation platform</p>
+            </div>
+            <div class="tool-card" data-tool="bloodhound">
+                <i class="fas fa-project-diagram"></i>
+                <h3>BloodHound</h3>
+                <p>Active Directory attack path analysis</p>
+            </div>
+            <div class="tool-card" data-tool="responder">
+                <i class="fas fa-broadcast-tower"></i>
+                <h3>Responder</h3>
+                <p>LLMNR, NBT-NS and MDNS poisoner</p>
+            </div>
+            <div class="tool-card" data-tool="crackmapexec">
+                <i class="fas fa-map"></i>
+                <h3>CrackMapExec</h3>
+                <p>Network exploitation swiss army knife</p>
+            </div>
+            <div class="tool-card" data-tool="impacket">
+                <i class="fas fa-toolbox"></i>
+                <h3>Impacket</h3>
+                <p>Python classes for network protocols</p>
+            </div>
+            <div class="tool-card" data-tool="mimikatz">
+                <i class="fas fa-memory"></i>
+                <h3>Mimikatz</h3>
+                <p>Windows credential extraction tool</p>
+            </div>
+            <div class="tool-card" data-tool="covenant">
+                <i class="fas fa-terminal"></i>
+                <h3>Covenant</h3>
+                <p>.NET command and control framework</p>
+            </div>
+            <div class="tool-card" data-tool="sliver">
+                <i class="fas fa-snake"></i>
+                <h3>Sliver</h3>
+                <p>Cross-platform adversary emulation</p>
+            </div>
+            <div class="tool-card" data-tool="chisel">
+                <i class="fas fa-tunnel"></i>
+                <h3>Chisel</h3>
+                <p>Fast TCP/UDP tunnel over HTTP</p>
+            </div>
+            <div class="tool-card" data-tool="ligolo-ng">
+                <i class="fas fa-route"></i>
+                <h3>Ligolo-ng</h3>
+                <p>Advanced tunneling tool</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Forensics Section -->
+    <section id="mobile-forensics" class="section mobile-forensics fade-in">
+        <h2 class="section-title">Mobile Forensics & Analysis Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card" data-tool="autopsy">
+                <i class="fas fa-microscope"></i>
+                <h3>Autopsy</h3>
+                <p>Digital forensics platform</p>
+            </div>
+            <div class="tool-card" data-tool="volatility">
+                <i class="fas fa-memory"></i>
+                <h3>Volatility</h3>
+                <p>Memory forensics framework</p>
+            </div>
+            <div class="tool-card" data-tool="sleuthkit">
+                <i class="fas fa-search-plus"></i>
+                <h3>The Sleuth Kit</h3>
+                <p>Digital investigation tools</p>
+            </div>
+            <div class="tool-card" data-tool="binwalk">
+                <i class="fas fa-file-archive"></i>
+                <h3>Binwalk</h3>
+                <p>Firmware analysis tool</p>
+            </div>
+            <div class="tool-card" data-tool="foremost">
+                <i class="fas fa-file-medical"></i>
+                <h3>Foremost</h3>
+                <p>File carving and recovery tool</p>
+            </div>
+            <div class="tool-card" data-tool="hashcat">
+                <i class="fas fa-hashtag"></i>
+                <h3>Hashcat</h3>
+                <p>Advanced password recovery</p>
+            </div>
+            <div class="tool-card" data-tool="exiftool">
+                <i class="fas fa-info-circle"></i>
+                <h3>ExifTool</h3>
+                <p>Metadata extraction utility</p>
+            </div>
+            <div class="tool-card" data-tool="strings">
+                <i class="fas fa-font"></i>
+                <h3>Strings</h3>
+                <p>Extract printable strings from files</p>
+            </div>
+            <div class="tool-card" data-tool="steghide">
+                <i class="fas fa-eye-slash"></i>
+                <h3>Steghide</h3>
+                <p>Steganography hiding tool</p>
+            </div>
+            <div class="tool-card" data-tool="photorec">
+                <i class="fas fa-camera"></i>
+                <h3>PhotoRec</h3>
+                <p>File recovery software</p>
             </div>
         </div>
     </section>
 
     <!-- Cybersecurity Section -->
-    <section id="cybersecurity" class="section fade-in">
+    <section id="cybersecurity" class="section dark fade-in">
         <h2 class="section-title">Cybersecurity Fundamentals</h2>
         <div class="tabs">
             <div class="tab-header">
-                <div class="active">🚨 Threats</div>
-                <div>🛡️ Protection</div>
-                <div>💼 Careers</div>
+                <div class="active">Threats</div>
+                <div>Protection</div>
+                <div>Careers</div>
             </div>
             <div class="tab-content">
                 <div class="active">
                     <h3>Common Cybersecurity Threats</h3>
-                    <div class="earning-cards">
-                        <div class="earning-card">
-                            <div class="icon">🦠</div>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <i class="fas fa-virus" style="font-size: 3rem; color: #e74c3c; text-align: center; display: block; margin: 1rem 0;"></i>
                             <h3>Malware</h3>
-                            <p>Malicious software including viruses, worms, trojans, ransomware, and spyware designed to damage or gain unauthorized access.</p>
+                            <p>Malicious software including viruses, worms, trojans, ransomware, and spyware designed to damage or gain unauthorized access to systems.</p>
                         </div>
-                        <div class="earning-card">
-                            <div class="icon">🎣</div>
+                        <div class="content-card">
+                            <i class="fas fa-fish" style="font-size: 3rem; color: #e74c3c; text-align: center; display: block; margin: 1rem 0;"></i>
                             <h3>Phishing</h3>
                             <p>Fraudulent attempts to obtain sensitive information by disguising as trustworthy entities in electronic communications.</p>
                         </div>
-                        <div class="earning-card">
-                            <div class="icon">🎭</div>
+                        <div class="content-card">
+                            <i class="fas fa-user-secret" style="font-size: 3rem; color: #e74c3c; text-align: center; display: block; margin: 1rem 0;"></i>
                             <h3>Social Engineering</h3>
                             <p>Psychological manipulation techniques used to trick users into making security mistakes or giving away sensitive information.</p>
                         </div>
@@ -1021,43 +1277,38 @@
                 </div>
                 <div>
                     <h3>Cybersecurity Protection Methods</h3>
-                    <p>Implementing comprehensive security measures is essential for protecting against modern cyber threats.</p>
-                    <div class="earning-cards">
-                        <div class="earning-card">
-                            <div class="icon">🔐</div>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <i class="fas fa-lock" style="font-size: 3rem; color: #2ecc71; text-align: center; display: block; margin: 1rem 0;"></i>
                             <h3>Encryption</h3>
                             <p>Protect data by converting it into a secure format that can only be read with the correct decryption key.</p>
                         </div>
-                        <div class="earning-card">
-                            <div class="icon">🔥</div>
+                        <div class="content-card">
+                            <i class="fas fa-shield-alt" style="font-size: 3rem; color: #2ecc71; text-align: center; display: block; margin: 1rem 0;"></i>
                             <h3>Firewalls</h3>
                             <p>Network security systems that monitor and control incoming and outgoing network traffic based on security rules.</p>
                         </div>
-                        <div class="earning-card">
-                            <div class="icon">🔑</div>
+                        <div class="content-card">
+                            <i class="fas fa-key" style="font-size: 3rem; color: #2ecc71; text-align: center; display: block; margin: 1rem 0;"></i>
                             <h3>Multi-Factor Authentication</h3>
-                            <p>Security process requiring multiple forms of verification to confirm user identity before granting access.</p>
+                            <p>Security process requiring multiple forms of verification before granting access to accounts or systems.</p>
                         </div>
                     </div>
                 </div>
                 <div>
                     <h3>Cybersecurity Career Paths</h3>
-                    <p>The cybersecurity field offers diverse opportunities with excellent growth potential and competitive compensation.</p>
-                    <div class="earning-cards">
-                        <div class="earning-card">
-                            <div class="icon">🔍</div>
+                    <div class="content-grid">
+                        <div class="content-card">
                             <h3>Security Analyst</h3>
-                            <p>Monitor networks for security breaches, investigate violations, and implement security measures.</p>
+                            <p>Monitor networks for security breaches, investigate violations, and implement security measures. Average salary: $60,000-$90,000</p>
                         </div>
-                        <div class="earning-card">
-                            <div class="icon">⚔️</div>
+                        <div class="content-card">
                             <h3>Penetration Tester</h3>
-                            <p>Ethically hack systems to identify vulnerabilities and help organizations improve their security posture.</p>
+                            <p>Ethically hack systems to find vulnerabilities before malicious actors do. Average salary: $70,000-$120,000</p>
                         </div>
-                        <div class="earning-card">
-                            <div class="icon">🏗️</div>
+                        <div class="content-card">
                             <h3>Security Architect</h3>
-                            <p>Design and build secure network systems, ensuring robust security from the ground up.</p>
+                            <p>Design and build secure network systems and infrastructure. Average salary: $90,000-$150,000</p>
                         </div>
                     </div>
                 </div>
@@ -1066,50 +1317,205 @@
     </section>
 
     <!-- Online Earning Section -->
-    <section id="online-earning" class="section fade-in">
-        <h2 class="section-title">💰 Online Earning Opportunities</h2>
+    <section id="online-earning" class="section gradient-bg fade-in">
+        <h2 class="section-title">Online Earning Opportunities</h2>
+        
+        <!-- Traditional Earning Methods -->
         <div class="earning-cards">
             <div class="earning-card">
-                <div class="icon">🐛</div>
+                <i class="fas fa-bug"></i>
                 <h3>Bug Bounty Programs</h3>
-                <p>Earn substantial rewards by finding and reporting security vulnerabilities in websites and applications. Top hunters earn $100K+ annually.</p>
+                <p>Earn $100-$50,000+ by finding and reporting vulnerabilities in websites and applications through platforms like HackerOne and Bugcrowd.</p>
                 <a href="#" class="btn small">Learn More</a>
             </div>
             <div class="earning-card">
-                <div class="icon">🛡️</div>
+                <i class="fas fa-shield-alt"></i>
                 <h3>Security Consulting</h3>
-                <p>Offer your cybersecurity expertise to businesses needing security assessments, compliance audits, and incident response.</p>
+                <p>Offer cybersecurity expertise to businesses. Freelance consultants earn $50-$200 per hour for security assessments and penetration testing.</p>
                 <a href="#" class="btn small">Learn More</a>
             </div>
             <div class="earning-card">
-                <div class="icon">🎓</div>
+                <i class="fas fa-graduation-cap"></i>
                 <h3>Online Teaching</h3>
-                <p>Create cybersecurity courses, conduct workshops, or provide one-on-one tutoring to aspiring security professionals.</p>
+                <p>Create cybersecurity courses on platforms like Udemy, Coursera, or tutor students. Top instructors earn $1,000-$10,000+ monthly.</p>
                 <a href="#" class="btn small">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Color Trading Section -->
+        <div class="trading-info">
+            <h3 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">🎯 Color Trading - Quick Money Making</h3>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h4>How Color Trading Works:</h4>
+                <p>Color trading is a simple prediction game where you guess which color will appear next. It's based on probability and pattern recognition.</p>
+                
+                <div class="color-demo">
+                    <div class="color-option color-red">RED</div>
+                    <div class="color-option color-green">GREEN</div>
+                    <div class="color-option color-violet">VIOLET</div>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; margin: 2rem 0;">
+                    <h4>🎮 Game Rules:</h4>
+                    <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+                        <li>🔴 <strong>Red (1:1 odds):</strong> If red appears, you win 90% of your bet</li>
+                        <li>🟢 <strong>Green (1:1 odds):</strong> If green appears, you win 90% of your bet</li>
+                        <li>🟣 <strong>Violet (1:4.5 odds):</strong> If violet appears, you win 450% of your bet</li>
+                        <li>⏱️ <strong>Game Duration:</strong> Each round lasts 1-3 minutes</li>
+                        <li>💰 <strong>Minimum Bet:</strong> Start with just 10</li>
+                    </ul>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; margin: 2rem 0;">
+                    <h4>💡 Pro Tips for Success:</h4>
+                    <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+                        <li>📊 Study previous results and patterns</li>
+                        <li>💰 Start with small amounts (10-₹50)</li>
+                        <li>🎯 Set daily profit targets (100-₹500)</li>
+                        <li>⏰ Play during peak hours (7-11 PM)</li>
+                        <li>🛑 Never chase losses - stick to your budget</li>
+                        <li>📈 Use the 2-3 color strategy for better odds</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trading Platforms -->
+        <div class="color-trading-cards">
+            <div class="trading-platform">
+                <div class="platform-header">
+                    <h3>🎯 92Jeeto Platform</h3>
+                    <div class="bonus-badge">100Rs Welcome Bonus</div>
+                </div>
+                <ul class="platform-features">
+                    <li>Instant withdrawals within 5 minutes</li>
+                    <li>24/7 customer support</li>
+                    <li>Multiple payment methods (𝑱𝒂𝒁𝒁 𝑪𝒂𝒔𝑯,𝑬𝒂𝒔𝒀 𝑷𝒂𝒊𝑺𝑨)</li>
+                    <li>Daily bonus and rewards</li>
+                    <li>Referral program - Earn 20% commission</li>
+                    <li>Minimum deposit 300Rsl: ₹100</li>
+                    <li>Minimum withdraw win: 500Rs per day</li>
+                </ul>
+                <a href="https://www.92lotto.top/#/register?invitationCode=52424195372" target="_blank" class="trading-btn">
+                    🚀 Join 92Jeeto Now
+                </a>
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    Invitation Code: <strong>52424195372</strong>
+                </p>
+
+                <a href="https://wa.link/7gp7qa" target="_blank" class="trading-btn">
+                    🚀 𝒋𝒐𝒊𝒏 𝒔𝒊𝒈𝒏𝒂𝒍𝒔 𝒈𝒓𝒐𝒖𝒑 𝒏𝒐𝒘
+                </a>
+            </div>
+
+            <div class="trading-platform">
+                <div class="platform-header">
+                    <h3>💎 Fantasy Gems</h3>
+                    <div class="bonus-badge">100Rs Welcome Bonus</div>
+                </div>
+                <ul class="platform-features">
+                    <li>Higher winning rates (95% payout)</li>
+                    <li>Advanced prediction tools</li>
+                    
+                    <li>Weekly tournaments with prizes</li>
+                    <li>Multiple payment methods (𝑱𝒂𝒁𝒁 𝑪𝒂𝒔𝑯,𝑬𝒂𝒔𝒀 𝑷𝒂𝒊𝑺𝑨)</li>
+                   
+                    <li>Referral program - Earn 20% commission</li>
+                    <li>Minimum deposit 300Rsl: ₹100</li>
+                    <li>Minimum withdraw win: 500Rs per day</li>
+                </ul>
+                <a href="https://www.fantasygems15.com/#/register?invitationCode=51661100594" target="_blank" class="trading-btn">
+                    💎 Join Fantasy Gems Now
+                </a>
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    Invitation Code: <strong>51661100594</strong>
+                </p>
+
+            
+                <a href="https://wa.link/7gp7qa" target="_blank" class="trading-btn">
+                    💎 𝒋𝒐𝒊𝒏 𝒔𝒊𝒈𝒏𝒂𝒍𝒔 𝒈𝒓𝒐𝒖𝒑 𝒏𝒐𝒘
+                </a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px;">
+            <h4>⚠️ Important Disclaimer</h4>
+            <p>Color trading involves risk and should be done responsibly. Only invest money you can afford to lose. This is for entertainment purposes and not guaranteed income. Please gamble responsibly and within your limits.</p>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="section dark fade-in">
+        <h2 class="section-title">Featured Courses</h2>
+        <div class="content-grid">
+            <div class="content-card">
+                <i class="fas fa-graduation-cap" style="font-size: 4rem; color: #3498db; text-align: center; display: block; margin: 1rem 0;"></i>
+                <h3>Certified Ethical Hacker (CEH)</h3>
+                <div style="color: #f1c40f; text-align: center; margin: 1rem 0;">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span style="color: #666; margin-left: 0.5rem;">4.5 (1,200 reviews)</span>
+                </div>
+                <p>Master penetration testing, vulnerability assessment, and ethical hacking techniques with hands-on labs and real-world scenarios.</p>
+                <a href="#" class="btn primary" style="width: 100%; text-align: center; margin-top: 1rem;">Enroll Now - $299</a>
+            </div>
+            <div class="content-card">
+                <i class="fas fa-shield-alt" style="font-size: 4rem; color: #2ecc71; text-align: center; display: block; margin: 1rem 0;"></i>
+                <h3>Cybersecurity Fundamentals</h3>
+                <div style="color: #f1c40f; text-align: center; margin: 1rem 0;">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span style="color: #666; margin-left: 0.5rem;">4.8 (890 reviews)</span>
+                </div>
+                <p>Learn the basics of cybersecurity, network security, and risk management. Perfect for beginners starting their security journey.</p>
+                <a href="#" class="btn primary" style="width: 100%; text-align: center; margin-top: 1rem;">Enroll Now - $199</a>
+            </div>
+            <div class="content-card">
+                <i class="fas fa-bug" style="font-size: 4rem; color: #e74c3c; text-align: center; display: block; margin: 1rem 0;"></i>
+                <h3>Bug Bounty Hunting</h3>
+                <div style="color: #f1c40f; text-align: center; margin: 1rem 0;">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span style="color: #666; margin-left: 0.5rem;">4.6 (650 reviews)</span>
+                </div>
+                <p>Learn how to find vulnerabilities and earn money through bug bounty programs. Includes real case studies and earning strategies.</p>
+                <a href="#" class="btn primary" style="width: 100%; text-align: center; margin-top: 1rem;">Enroll Now - $399</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section fade-in">
-        <h2 class="section-title">📞 Get In Touch</h2>
+        <h2 class="section-title">Contact Us</h2>
         <div class="contact-container">
             <form class="contact-form">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Subject" required>
                 <textarea placeholder="Your Message" required></textarea>
                 <button type="submit" class="btn primary">Send Message</button>
             </form>
             <div class="contact-info">
-                <h3>Contact Information</h3>
-                <p><span class="icon">📧</span> wolvessmm.com.com</p>
-                <p><span class="icon">📱</span> 03212240750</p>
-                <p><span class="icon">📍</span> idk</p>
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-envelope"></i> wolvessmm.com@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +923212240750</p>
+                <p><i class="fas fa-map-marker-alt"></i> idk</p>
                 <div class="social-links">
-                    <a href="#">📘</a>
-                    <a href="#">🐦</a>
-                    <a href="#">💼</a>
-                    <a href="#">📺</a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -1120,32 +1526,44 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>About CyberSecure</h3>
-                <p>Empowering the next generation of cybersecurity professionals with cutting-edge knowledge and practical skills since 2020.</p>
+                <p>Providing quality education in cybersecurity and ethical hacking since 2020. Join thousands of students who have advanced their careers with our comprehensive courses.</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#ethical-hacking">Ethical Hacking</a></li>
+                    <li><a href="#advanced-tools">Advanced Tools</a></li>
                     <li><a href="#cybersecurity">Cybersecurity</a></li>
                     <li><a href="#online-earning">Online Earning</a></li>
+                    <li><a href="#courses">Courses</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Stay Updated</h3>
-                <p>Subscribe to our newsletter for the latest cybersecurity insights and opportunities.</p>
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Certification</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get the latest cybersecurity news and course updates.</p>
                 <form class="newsletter-form">
-                    <input type="email" id="email" placeholder="Enter your email" required />
+                    <input type="email" placeholder="Your Email" required>
                     <button type="submit">Subscribe</button>
                 </form>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 CyberSecure. All rights reserved. | Securing the digital future.</p>
+            <p>&copy; 2024 CyberSecure. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
     </footer>
 
-    <!-- Enhanced Tool Details Popup -->
+    <!-- Tool Details Popup -->
     <div class="popup-overlay" id="popupOverlay">
         <div class="popup-content">
             <div class="popup-header">
@@ -1157,77 +1575,77 @@
                 <!-- Content will be dynamically inserted here -->
             </div>
             <div class="whatsapp-cta">
-                <p>Need personalized guidance? Let's discuss your cybersecurity journey!</p>
-                <a href="https://wa.link/7gp7qa" class="whatsapp-btn" target="_blank">Chat with Expert</a>
+                <p>Need help with this tool? Get expert guidance!</p>
+                <a href="https://wa.link/7gp7qa" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Chat with Expert
+                </a>
             </div>
         </div>
     </div>
 
     <script>
-        // Tool information database
+        // Comprehensive tool data with detailed information
         const toolsData = {
             nmap: {
-                title: "Nmap",
-                category: "Network Discovery & Security Auditing",
-                description: "Nmap (Network Mapper) is a free and open-source network scanner used to discover hosts and services on a computer network by sending packets and analyzing the responses.",
+                title: "Nmap (Network Mapper)",
+                category: "Network Discovery",
+                description: "Nmap is a free and open-source network scanner used to discover hosts and services on a computer network by sending packets and analyzing the responses.",
                 features: [
                     "Host discovery and port scanning",
                     "Service version detection",
                     "Operating system detection",
-                    "Scriptable interaction with the target",
+                    "Scriptable interaction with targets",
                     "Flexible target specification",
-                    "Multiple output formats"
+                    "IPv6 support"
                 ],
-                installation: "sudo apt-get install nmap  # Ubuntu/Debian\nbrew install nmap  # macOS\nchoco install nmap  # Windows",
+                installation: "sudo apt-get install nmap  # Ubuntu/Debian\nbrew install nmap  # macOS\nwinget install nmap  # Windows",
                 basicCommands: [
-                    "nmap target_ip  # Basic scan",
-                    "nmap -sS target_ip  # SYN scan",
-                    "nmap -sV target_ip  # Version detection",
-                    "nmap -O target_ip  # OS detection",
-                    "nmap -A target_ip  # Aggressive scan",
-                    "nmap -p 1-1000 target_ip  # Port range scan"
+                    "nmap 192.168.1.1  # Basic scan",
+                    "nmap -sS 192.168.1.0/24  # SYN scan of network",
+                    "nmap -sV -O target.com  # Version and OS detection",
+                    "nmap -A target.com  # Aggressive scan",
+                    "nmap -p 80,443 target.com  # Specific ports"
                 ],
                 useCases: [
                     {
+                        title: "Network Discovery",
+                        description: "Identify active hosts and open ports on a network for security assessment."
+                    },
+                    {
+                        title: "Vulnerability Assessment",
+                        description: "Detect services and versions to identify potential security vulnerabilities."
+                    },
+                    {
                         title: "Network Inventory",
-                        description: "Discover all devices connected to your network and identify open services."
-                    },
-                    {
-                        title: "Security Auditing",
-                        description: "Identify potential security vulnerabilities in network services."
-                    },
-                    {
-                        title: "Network Troubleshooting",
-                        description: "Diagnose network connectivity issues and service availability."
+                        description: "Create comprehensive maps of network infrastructure and services."
                     }
                 ],
-                warning: "Always ensure you have proper authorization before scanning networks. Unauthorized scanning may be illegal and could be considered an attack."
+                warning: "Only use Nmap on networks you own or have explicit permission to scan. Unauthorized scanning may be illegal and trigger security alerts."
             },
             metasploit: {
                 title: "Metasploit Framework",
                 category: "Exploitation Framework",
-                description: "The Metasploit Framework is a powerful penetration testing platform that enables security professionals to find, exploit, and validate vulnerabilities in systems and applications.",
+                description: "The Metasploit Framework is a penetration testing platform that enables security professionals to find, exploit, and validate vulnerabilities.",
                 features: [
                     "Extensive exploit database",
                     "Payload generation and encoding",
                     "Post-exploitation modules",
-                    "Auxiliary modules for scanning",
+                    "Auxiliary scanning modules",
                     "Meterpreter advanced payload",
                     "Integration with other security tools"
                 ],
                 installation: "curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall",
                 basicCommands: [
                     "msfconsole  # Start Metasploit console",
-                    "search exploit_name  # Search for exploits",
-                    "use exploit/path/to/exploit  # Select exploit",
-                    "show options  # Display exploit options",
-                    "set RHOSTS target_ip  # Set target",
+                    "search ms17-010  # Search for exploits",
+                    "use exploit/windows/smb/ms17_010_eternalblue  # Select exploit",
+                    "set RHOSTS 192.168.1.100  # Set target",
                     "exploit  # Run the exploit"
                 ],
                 useCases: [
                     {
                         title: "Penetration Testing",
-                        description: "Conduct authorized security assessments to identify and exploit vulnerabilities."
+                        description: "Test system security by attempting to exploit known vulnerabilities."
                     },
                     {
                         title: "Vulnerability Validation",
@@ -1238,19 +1656,19 @@
                         description: "Develop and test new exploits and security techniques."
                     }
                 ],
-                warning: "Metasploit is a powerful tool that should only be used on systems you own or have explicit permission to test. Misuse can result in serious legal consequences."
+                warning: "Metasploit should only be used on systems you own or have explicit written permission to test. Unauthorized use is illegal."
             },
             wireshark: {
                 title: "Wireshark",
                 category: "Network Protocol Analyzer",
-                description: "Wireshark is the world's foremost network protocol analyzer. It lets you capture and interactively browse the traffic running on a computer network.",
+                description: "Wireshark is the world's foremost network protocol analyzer, allowing you to see what's happening on your network at a microscopic level.",
                 features: [
-                    "Live capture and offline analysis",
                     "Deep inspection of hundreds of protocols",
-                    "Multi-platform support",
+                    "Live capture and offline analysis",
                     "Rich VoIP analysis",
                     "Powerful display filters",
-                    "Coloring rules for quick analysis"
+                    "Coloring rules for quick analysis",
+                    "Cross-platform compatibility"
                 ],
                 installation: "sudo apt-get install wireshark  # Ubuntu/Debian\nbrew install wireshark  # macOS\n# Download from wireshark.org for Windows",
                 basicCommands: [
@@ -1258,12 +1676,12 @@
                     "tshark -i eth0  # Command line capture",
                     "tshark -r capture.pcap  # Read capture file",
                     "tshark -i eth0 -f 'port 80'  # Capture HTTP traffic",
-                    "tshark -i eth0 -Y 'http'  # Display filter for HTTP"
+                    "tshark -i eth0 -Y 'http.request.method == GET'  # Filter GET requests"
                 ],
                 useCases: [
                     {
                         title: "Network Troubleshooting",
-                        description: "Analyze network issues by examining packet-level communications."
+                        description: "Diagnose network connectivity and performance issues."
                     },
                     {
                         title: "Security Analysis",
@@ -1271,159 +1689,194 @@
                     },
                     {
                         title: "Protocol Development",
-                        description: "Debug and validate custom network protocols during development."
+                        description: "Debug and analyze custom network protocols during development."
                     }
                 ],
-                warning: "Be aware of privacy and legal implications when capturing network traffic. Only capture traffic on networks you own or have permission to monitor."
+                warning: "Ensure you have proper authorization before capturing network traffic. Intercepting communications without permission may violate privacy laws."
             },
-            burp: {
+            burpsuite: {
                 title: "Burp Suite",
-                category: "Web Application Security Testing",
-                description: "Burp Suite is an integrated platform for performing security testing of web applications. It contains various tools that work together to support the entire testing process.",
+                category: "Web Application Security",
+                description: "Burp Suite is an integrated platform for performing security testing of web applications, combining manual and automated techniques.",
                 features: [
-                    "Intercepting proxy for manual testing",
-                    "Automated web vulnerability scanner",
-                    "Spider for content discovery",
-                    "Repeater for manual request manipulation",
+                    "Intercepting proxy for HTTP/S traffic",
+                    "Web application scanner",
                     "Intruder for automated attacks",
-                    "Extensible through BApps"
+                    "Repeater for manual request manipulation",
+                    "Sequencer for randomness analysis",
+                    "Extensible with custom plugins"
                 ],
-                installation: "# Download from portswigger.net\n# Professional version requires license\n# Community edition is free with limitations",
+                installation: "# Download from portswigger.net\n# Professional version requires license\n# Community edition is free",
                 basicCommands: [
                     "Configure browser proxy to 127.0.0.1:8080",
-                    "Import Burp CA certificate",
-                    "Use Proxy tab to intercept requests",
-                    "Send requests to Repeater for testing",
-                    "Use Scanner for automated testing",
-                    "Analyze results in Target tab"
+                    "Intercept requests in Proxy tab",
+                    "Send requests to Repeater for modification",
+                    "Use Scanner for automated vulnerability detection",
+                    "Analyze session tokens in Sequencer"
                 ],
                 useCases: [
                     {
-                        title: "Web Application Penetration Testing",
-                        description: "Comprehensive security testing of web applications and APIs."
+                        title: "Web Application Testing",
+                        description: "Identify vulnerabilities like SQL injection, XSS, and CSRF in web applications."
                     },
                     {
-                        title: "Bug Bounty Hunting",
-                        description: "Find security vulnerabilities in web applications for bounty programs."
+                        title: "API Security Testing",
+                        description: "Test REST APIs and web services for security flaws."
                     },
                     {
-                        title: "Security Code Review",
-                        description: "Validate security fixes and test application security controls."
+                        title: "Session Management Analysis",
+                        description: "Analyze authentication mechanisms and session handling."
                     }
                 ],
-                warning: "Only test web applications you own or have explicit permission to test. Unauthorized testing of web applications is illegal."
+                warning: "Only test web applications you own or have explicit permission to test. Unauthorized testing may be illegal."
             },
-            john: {
+            johntheripper: {
                 title: "John the Ripper",
-                category: "Password Security Testing",
-                description: "John the Ripper is a fast password cracker, currently available for many flavors of Unix, Windows, DOS, and OpenVMS. Its primary purpose is to detect weak Unix passwords.",
+                category: "Password Cracking",
+                description: "John the Ripper is a fast password cracker, currently available for many flavors of Unix, Windows, DOS, and OpenVMS.",
                 features: [
                     "Multiple password hash formats",
                     "Dictionary and brute-force attacks",
                     "Incremental mode for systematic attacks",
-                    "Rules for password mutations",
+                    "Wordlist rules for password mutations",
                     "Multi-platform support",
-                    "GPU acceleration support"
+                    "Parallel processing capabilities"
                 ],
                 installation: "sudo apt-get install john  # Ubuntu/Debian\nbrew install john  # macOS\n# Compile from source for latest features",
                 basicCommands: [
-                    "john password_file  # Basic crack attempt",
-                    "john --wordlist=rockyou.txt password_file  # Dictionary attack",
-                    "john --incremental password_file  # Brute force",
-                    "john --show password_file  # Show cracked passwords",
-                    "john --rules password_file  # Apply word mangling rules"
+                    "john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt",
+                    "john --incremental hashes.txt  # Brute force mode",
+                    "john --show hashes.txt  # Show cracked passwords",
+                    "john --format=md5 hashes.txt  # Specify hash format",
+                    "john --rules --wordlist=wordlist.txt hashes.txt"
                 ],
                 useCases: [
                     {
                         title: "Password Policy Testing",
-                        description: "Evaluate the strength of organizational password policies."
-                    },
-                    {
-                        title: "Security Auditing",
-                        description: "Test password strength in security assessments."
+                        description: "Test the strength of organizational password policies."
                     },
                     {
                         title: "Forensic Analysis",
-                        description: "Recover passwords from seized systems in authorized investigations."
+                        description: "Recover passwords from seized systems during investigations."
+                    },
+                    {
+                        title: "Security Auditing",
+                        description: "Identify weak passwords in system password databases."
                     }
                 ],
-                warning: "Only use John the Ripper on password hashes you own or have explicit permission to test. Unauthorized password cracking is illegal."
+                warning: "Only use John the Ripper on password hashes you own or have permission to test. Unauthorized password cracking is illegal."
             },
             sqlmap: {
                 title: "SQLMap",
                 category: "SQL Injection Testing",
-                description: "SQLMap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over database servers.",
+                description: "SQLMap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws.",
                 features: [
                     "Automatic SQL injection detection",
                     "Database fingerprinting",
-                    "Data extraction from databases",
-                    "File system access capabilities",
+                    "Data extraction capabilities",
+                    "File system access",
                     "Operating system command execution",
                     "Support for multiple database systems"
                 ],
-                installation: "git clone https://github.com/sqlmapproject/sqlmap.git\ncd sqlmap\npython sqlmap.py",
+                installation: "sudo apt-get install sqlmap  # Ubuntu/Debian\npip install sqlmap  # Python pip\ngit clone https://github.com/sqlmapproject/sqlmap.git",
                 basicCommands: [
-                    "python sqlmap.py -u 'http://target.com/page?id=1'  # Basic test",
-                    "python sqlmap.py -u 'url' --dbs  # List databases",
-                    "python sqlmap.py -u 'url' -D database --tables  # List tables",
-                    "python sqlmap.py -u 'url' -D db -T table --dump  # Dump data",
-                    "python sqlmap.py -u 'url' --os-shell  # Get OS shell"
+                    "sqlmap -u 'http://target.com/page.php?id=1'  # Basic test",
+                    "sqlmap -u 'http://target.com/page.php?id=1' --dbs  # List databases",
+                    "sqlmap -u 'http://target.com/page.php?id=1' -D database --tables  # List tables",
+                    "sqlmap -u 'http://target.com/page.php?id=1' -D db -T table --dump  # Dump data",
+                    "sqlmap -r request.txt  # Test from saved request"
                 ],
                 useCases: [
                     {
                         title: "Web Application Security Testing",
-                        description: "Identify and exploit SQL injection vulnerabilities in web applications."
+                        description: "Identify SQL injection vulnerabilities in web applications."
                     },
                     {
                         title: "Database Security Assessment",
-                        description: "Evaluate database security configurations and access controls."
+                        description: "Test database security configurations and access controls."
                     },
                     {
                         title: "Penetration Testing",
-                        description: "Demonstrate the impact of SQL injection vulnerabilities to clients."
+                        description: "Exploit SQL injection flaws during authorized security assessments."
                     }
                 ],
-                warning: "SQLMap can cause data loss or system damage. Only use on applications you own or have explicit written permission to test."
+                warning: "Only use SQLMap on applications you own or have explicit permission to test. Unauthorized testing may be illegal and cause data loss."
             },
-            aircrack: {
+            aircrackng: {
                 title: "Aircrack-ng",
-                category: "WiFi Security Assessment",
-                description: "Aircrack-ng is a complete suite of tools to assess WiFi network security. It focuses on different areas of WiFi security: monitoring, attacking, testing, and cracking.",
+                category: "WiFi Security Auditing",
+                description: "Aircrack-ng is a complete suite of tools to assess WiFi network security, focusing on monitoring, attacking, testing, and cracking.",
                 features: [
                     "WiFi packet capture and analysis",
                     "WEP and WPA/WPA2 key cracking",
                     "Fake access point creation",
-                    "Deauthentication attacks",
                     "Packet injection capabilities",
-                    "Multiple attack vectors"
+                    "Network monitoring and analysis",
+                    "Dictionary and brute-force attacks"
                 ],
-                installation: "sudo apt-get install aircrack-ng  # Ubuntu/Debian\nbrew install aircrack-ng  # macOS\n# Requires compatible WiFi adapter",
+                installation: "sudo apt-get install aircrack-ng  # Ubuntu/Debian\nbrew install aircrack-ng  # macOS\n# Requires compatible wireless adapter",
                 basicCommands: [
                     "airmon-ng start wlan0  # Enable monitor mode",
                     "airodump-ng wlan0mon  # Scan for networks",
-                    "airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w capture wlan0mon  # Capture handshake",
+                    "airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w capture wlan0mon",
                     "aireplay-ng -0 10 -a AA:BB:CC:DD:EE:FF wlan0mon  # Deauth attack",
                     "aircrack-ng -w wordlist.txt capture-01.cap  # Crack password"
                 ],
                 useCases: [
                     {
                         title: "WiFi Security Assessment",
-                        description: "Test the security of wireless networks and identify vulnerabilities."
+                        description: "Test the security of wireless networks and access points."
+                    },
+                    {
+                        title: "Network Penetration Testing",
+                        description: "Assess wireless network security during authorized penetration tests."
+                    },
+                    {
+                        title: "Forensic Analysis",
+                        description: "Analyze wireless network traffic for forensic investigations."
+                    }
+                ],
+                warning: "Only use Aircrack-ng on networks you own or have explicit permission to test. Unauthorized WiFi attacks are illegal."
+            },
+            nikto: {
+                title: "Nikto",
+                category: "Web Server Scanner",
+                description: "Nikto is an Open Source web server scanner which performs comprehensive tests against web servers for multiple items.",
+                features: [
+                    "Over 6700 potentially dangerous files/programs",
+                    "Checks for outdated server versions",
+                    "Server configuration issues detection",
+                    "Default files and programs identification",
+                    "SSL certificate analysis",
+                    "Customizable scan profiles"
+                ],
+                installation: "sudo apt-get install nikto  # Ubuntu/Debian\nbrew install nikto  # macOS\ngit clone https://github.com/sullo/nikto.git",
+                basicCommands: [
+                    "nikto -h http://target.com  # Basic scan",
+                    "nikto -h https://target.com -ssl  # HTTPS scan",
+                    "nikto -h target.com -p 80,443,8080  # Multiple ports",
+                    "nikto -h target.com -o report.html -Format html  # HTML report",
+                    "nikto -h target.com -Tuning 1,2,3  # Specific tests"
+                ],
+                useCases: [
+                    {
+                        title: "Web Server Security Assessment",
+                        description: "Identify common web server vulnerabilities and misconfigurations."
+                    },
+                    {
+                        title: "Compliance Testing",
+                        description: "Verify web servers meet security compliance requirements."
                     },
                     {
                         title: "Penetration Testing",
-                        description: "Evaluate wireless security as part of comprehensive security assessments."
-                    },
-                    {
-                        title: "Network Forensics",
-                        description: "Analyze wireless network traffic for security incidents."
+                        description: "Perform initial reconnaissance and vulnerability identification."
                     }
                 ],
-                warning: "Only test WiFi networks you own or have explicit permission to test. Unauthorized WiFi testing is illegal in most jurisdictions."
+                warning: "Only scan web servers you own or have explicit permission to test. Unauthorized scanning may be illegal and trigger security alerts."
             },
             hydra: {
                 title: "Hydra",
-                category: "Network Login Cracker",
+                category: "Login Brute Forcer",
                 description: "Hydra is a parallelized login cracker which supports numerous protocols to attack. It's very fast and flexible, and new modules are easy to add.",
                 features: [
                     "Support for 50+ protocols",
@@ -1456,6 +1909,764 @@
                     }
                 ],
                 warning: "Only use Hydra against systems you own or have explicit permission to test. Unauthorized login attempts are illegal and may trigger security alerts."
+            },
+            "owasp-zap": {
+                title: "OWASP ZAP",
+                category: "Web Application Security Scanner",
+                description: "OWASP ZAP (Zed Attack Proxy) is one of the world's most popular free security tools and is actively maintained by hundreds of international volunteers.",
+                features: [
+                    "Intercepting proxy",
+                    "Automated scanner",
+                    "Passive and active scanning",
+                    "Traditional and Ajax spiders",
+                    "Brute force scanner",
+                    "Port scanner"
+                ],
+                installation: "sudo apt-get install zaproxy  # Ubuntu/Debian\nbrew install --cask owasp-zap  # macOS\n# Download from owasp.org/www-project-zap/",
+                basicCommands: [
+                    "zap.sh -daemon -port 8080  # Start in daemon mode",
+                    "Configure browser proxy to localhost:8080",
+                    "Use GUI for manual testing",
+                    "zap-baseline.py -t http://target.com  # Baseline scan",
+                    "zap-full-scan.py -t http://target.com  # Full scan"
+                ],
+                useCases: [
+                    {
+                        title: "Web Application Security Testing",
+                        description: "Comprehensive security testing of web applications and APIs."
+                    },
+                    {
+                        title: "DevSecOps Integration",
+                        description: "Integrate automated security testing into CI/CD pipelines."
+                    },
+                    {
+                        title: "Security Training",
+                        description: "Learn web application security testing techniques."
+                    }
+                ],
+                warning: "Only test applications you own or have explicit permission to test. Unauthorized testing may be illegal."
+            },
+            // Advanced Tools
+            cobaltstrike: {
+                title: "Cobalt Strike",
+                category: "Advanced Threat Emulation",
+                description: "Cobalt Strike is a commercial penetration testing tool that gives security professionals access to a post-exploitation agent and covert channels.",
+                features: [
+                    "Advanced post-exploitation capabilities",
+                    "Beacon payload with C2 communication",
+                    "Malleable C2 profiles",
+                    "Lateral movement techniques",
+                    "Credential harvesting",
+                    "Social engineering toolkit"
+                ],
+                installation: "# Commercial license required\n# Download from cobaltstrike.com\n# Requires Java Runtime Environment",
+                basicCommands: [
+                    "./teamserver <IP> <password>  # Start team server",
+                    "Connect with Cobalt Strike client",
+                    "Generate payloads through GUI",
+                    "Use Beacon for post-exploitation",
+                    "Leverage built-in attack techniques"
+                ],
+                useCases: [
+                    {
+                        title: "Red Team Operations",
+                        description: "Simulate advanced persistent threats and sophisticated attacks."
+                    },
+                    {
+                        title: "Adversary Simulation",
+                        description: "Emulate real-world attack scenarios and techniques."
+                    },
+                    {
+                        title: "Security Training",
+                        description: "Train security teams on advanced attack detection and response."
+                    }
+                ],
+                warning: "Cobalt Strike is a powerful tool that should only be used by authorized security professionals. Misuse can cause significant damage and is illegal."
+            },
+            bloodhound: {
+                title: "BloodHound",
+                category: "Active Directory Analysis",
+                description: "BloodHound uses graph theory to reveal hidden and often unintended relationships within an Active Directory environment.",
+                features: [
+                    "Active Directory relationship mapping",
+                    "Attack path identification",
+                    "Privilege escalation analysis",
+                    "Graph-based visualization",
+                    "Custom queries support",
+                    "Integration with other tools"
+                ],
+                installation: "# Download from github.com/BloodHoundAD/BloodHound\n# Requires Neo4j database\n# Use SharpHound for data collection",
+                basicCommands: [
+                    "SharpHound.exe -c All  # Collect AD data",
+                    "Import collected data into BloodHound",
+                    "Run pre-built queries for analysis",
+                    "Find shortest path to Domain Admin",
+                    "Identify high-value targets"
+                ],
+                useCases: [
+                    {
+                        title: "Active Directory Security Assessment",
+                        description: "Identify attack paths and privilege escalation opportunities in AD."
+                    },
+                    {
+                        title: "Red Team Operations",
+                        description: "Plan attack strategies based on AD relationships and permissions."
+                    },
+                    {
+                        title: "Security Hardening",
+                        description: "Identify and remediate dangerous AD configurations."
+                    }
+                ],
+                warning: "Only use BloodHound on Active Directory environments you own or have explicit permission to analyze."
+            },
+            responder: {
+                title: "Responder",
+                category: "Network Credential Harvesting",
+                description: "Responder is a LLMNR, NBT-NS and MDNS poisoner tool designed to assist penetration testers in gaining network credentials.",
+                features: [
+                    "LLMNR/NBT-NS poisoning",
+                    "MDNS poisoning",
+                    "HTTP/SMB/SQL authentication capture",
+                    "WPAD proxy detection",
+                    "Rogue authentication servers",
+                    "Challenge/response capture"
+                ],
+                installation: "git clone https://github.com/lgandx/Responder.git\ncd Responder\npython Responder.py -h",
+                basicCommands: [
+                    "python Responder.py -I eth0  # Basic poisoning",
+                    "python Responder.py -I eth0 -A  # Analyze mode",
+                    "python Responder.py -I eth0 -w  # Enable WPAD",
+                    "python Responder.py -I eth0 -F  # Force authentication",
+                    "hashcat -m 5600 hashes.txt wordlist.txt  # Crack captured hashes"
+                ],
+                useCases: [
+                    {
+                        title: "Network Penetration Testing",
+                        description: "Capture network credentials during authorized penetration tests."
+                    },
+                    {
+                        title: "Security Assessment",
+                        description: "Test network security against credential harvesting attacks."
+                    },
+                    {
+                        title: "Red Team Operations",
+                        description: "Gain initial access through credential capture techniques."
+                    }
+                ],
+                warning: "Only use Responder on networks you own or have explicit permission to test. Unauthorized credential harvesting is illegal."
+            },
+            crackmapexec: {
+                title: "CrackMapExec",
+                category: "Network Exploitation",
+                description: "CrackMapExec is a swiss army knife for pentesting networks, designed to aid in post-exploitation of Active Directory environments.",
+                features: [
+                    "SMB/WinRM/SSH/LDAP protocol support",
+                    "Credential validation and spraying",
+                    "Command execution capabilities",
+                    "Database integration",
+                    "Module system for extensibility",
+                    "Stealth and evasion techniques"
+                ],
+                installation: "pip install crackmapexec\n# Or install from GitHub\ngit clone https://github.com/byt3bl33d3r/CrackMapExec.git",
+                basicCommands: [
+                    "crackmapexec smb 192.168.1.0/24  # SMB enumeration",
+                    "crackmapexec smb 192.168.1.100 -u user -p password  # Credential validation",
+                    "crackmapexec smb 192.168.1.100 -u user -p password -x whoami  # Command execution",
+                    "crackmapexec smb 192.168.1.0/24 -u users.txt -p passwords.txt  # Password spraying",
+                    "crackmapexec smb 192.168.1.100 -u user -H hash  # Pass-the-hash"
+                ],
+                useCases: [
+                    {
+                        title: "Active Directory Penetration Testing",
+                        description: "Test AD security through credential validation and lateral movement."
+                    },
+                    {
+                        title: "Network Reconnaissance",
+                        description: "Enumerate network services and validate credentials across multiple hosts."
+                    },
+                    {
+                        title: "Post-Exploitation",
+                        description: "Execute commands and move laterally through compromised networks."
+                    }
+                ],
+                warning: "Only use CrackMapExec on networks you own or have explicit permission to test. Unauthorized network exploitation is illegal."
+            },
+            impacket: {
+                title: "Impacket",
+                category: "Network Protocol Implementation",
+                description: "Impacket is a collection of Python classes for working with network protocols, providing low-level programmatic access to packets.",
+                features: [
+                    "SMB/MSRPC protocol implementation",
+                    "Kerberos authentication support",
+                    "LDAP and Active Directory integration",
+                    "DCE/RPC endpoint mapper",
+                    "Network packet crafting",
+                    "Various attack techniques"
+                ],
+                installation: "pip install impacket\n# Or install from GitHub\ngit clone https://github.com/SecureAuthCorp/impacket.git",
+                basicCommands: [
+                    "psexec.py domain/user:password@target  # Remote command execution",
+                    "smbclient.py domain/user:password@target  # SMB client",
+                    "secretsdump.py domain/user:password@target  # Extract secrets",
+                    "GetNPUsers.py domain/ -usersfile users.txt  # ASREPRoast",
+                    "GetUserSPNs.py domain/user:password  # Kerberoasting"
+                ],
+                useCases: [
+                    {
+                        title: "Active Directory Attacks",
+                        description: "Perform various AD attacks like Kerberoasting and ASREPRoasting."
+                    },
+                    {
+                        title: "Network Protocol Testing",
+                        description: "Test and interact with Windows network protocols."
+                    },
+                    {
+                        title: "Penetration Testing",
+                        description: "Leverage Windows protocols for post-exploitation activities."
+                    }
+                ],
+                warning: "Only use Impacket tools on systems you own or have explicit permission to test. Unauthorized access is illegal."
+            },
+            mimikatz: {
+                title: "Mimikatz",
+                category: "Credential Extraction",
+                description: "Mimikatz is a tool that can extract plaintext passwords, hash, PIN code and kerberos tickets from memory.",
+                features: [
+                    "Password extraction from memory",
+                    "Hash dumping capabilities",
+                    "Kerberos ticket manipulation",
+                    "Pass-the-hash attacks",
+                    "Golden/Silver ticket creation",
+                    "Windows credential manager access"
+                ],
+                installation: "# Download from github.com/gentilkiwi/mimikatz\n# Requires administrative privileges\n# Often detected by antivirus",
+                basicCommands: [
+                    "privilege::debug  # Enable debug privilege",
+                    "sekurlsa::logonpasswords  # Extract passwords",
+                    "sekurlsa::wdigest  # Extract WDigest passwords",
+                    "kerberos::list  # List Kerberos tickets",
+                    "lsadump::sam  # Dump SAM database"
+                ],
+                useCases: [
+                    {
+                        title: "Post-Exploitation",
+                        description: "Extract credentials from compromised Windows systems."
+                    },
+                    {
+                        title: "Forensic Analysis",
+                        description: "Analyze Windows systems for credential artifacts."
+                    },
+                    {
+                        title: "Red Team Operations",
+                        description: "Escalate privileges and move laterally through networks."
+                    }
+                ],
+                warning: "Mimikatz should only be used on systems you own or have explicit permission to test. Unauthorized credential extraction is illegal."
+            },
+            covenant: {
+                title: "Covenant",
+                category: "Command and Control",
+                description: "Covenant is a .NET command and control framework that aims to highlight the attack surface of .NET, make the use of offensive .NET tradecraft easier.",
+                features: [
+                    ".NET-based C2 framework",
+                    "HTTP/HTTPS communication",
+                    "Grunt implant system",
+                    "Task-based command execution",
+                    "Built-in evasion techniques",
+                    "Web-based interface"
+                ],
+                installation: "git clone --recurse-submodules https://github.com/cobbr/Covenant\ncd Covenant/Covenant\ndotnet run",
+                basicCommands: [
+                    "Access web interface at https://localhost:7443",
+                    "Create listeners for C2 communication",
+                    "Generate Grunt implants",
+                    "Execute tasks on compromised hosts",
+                    "Use built-in post-exploitation modules"
+                ],
+                useCases: [
+                    {
+                        title: "Red Team Operations",
+                        description: "Maintain persistent access and control over compromised systems."
+                    },
+                    {
+                        title: "Adversary Simulation",
+                        description: "Simulate advanced persistent threat (APT) activities."
+                    },
+                    {
+                        title: "Security Training",
+                        description: "Train blue teams on detecting and responding to C2 activities."
+                    }
+                ],
+                warning: "Covenant is a powerful C2 framework that should only be used by authorized security professionals in controlled environments."
+            },
+            sliver: {
+                title: "Sliver",
+                category: "Cross-Platform C2",
+                description: "Sliver is an open source cross-platform adversary emulation/red team framework, it can be used by organizations of all sizes.",
+                features: [
+                    "Cross-platform implants (Windows, Linux, macOS)",
+                    "Multiple communication protocols",
+                    "Dynamic code generation",
+                    "Multiplayer support",
+                    "Extensible architecture",
+                    "Built-in evasion techniques"
+                ],
+                installation: "# Download from github.com/BishopFox/sliver\n# Pre-compiled binaries available\n# Or compile from source with Go",
+                basicCommands: [
+                    "sliver-server  # Start Sliver server",
+                    "generate --mtls example.com --os windows  # Generate implant",
+                    "mtls  # Start mTLS listener",
+                    "sessions  # List active sessions",
+                    "use <session-id>  # Interact with session"
+                ],
+                useCases: [
+                    {
+                        title: "Red Team Exercises",
+                        description: "Conduct comprehensive red team operations across multiple platforms."
+                    },
+                    {
+                        title: "Adversary Emulation",
+                        description: "Emulate real-world threat actors and attack techniques."
+                    },
+                    {
+                        title: "Security Assessment",
+                        description: "Test detection and response capabilities against advanced threats."
+                    }
+                ],
+                warning: "Sliver should only be used by authorized security professionals for legitimate security testing purposes."
+            },
+            chisel: {
+                title: "Chisel",
+                category: "Network Tunneling",
+                description: "Chisel is a fast TCP/UDP tunnel, transported over HTTP, secured via SSH. Single executable including both client and server.",
+                features: [
+                    "TCP/UDP tunneling over HTTP",
+                    "SSH-secured connections",
+                    "Single binary deployment",
+                    "Reverse and forward tunnels",
+                    "SOCKS5 proxy support",
+                    "Cross-platform compatibility"
+                ],
+                installation: "# Download from github.com/jpillora/chisel\n# Pre-compiled binaries available\ngo install github.com/jpillora/chisel@latest",
+                basicCommands: [
+                    "chisel server -p 8080 --reverse  # Start server",
+                    "chisel client server:8080 R:3000:localhost:3000  # Reverse tunnel",
+                    "chisel client server:8080 3000:localhost:3000  # Forward tunnel",
+                    "chisel client server:8080 socks  # SOCKS5 proxy",
+                    "chisel server -p 8080 --auth user:pass  # Authenticated server"
+                ],
+                useCases: [
+                    {
+                        title: "Network Pivoting",
+                        description: "Access internal networks through compromised systems."
+                    },
+                    {
+                        title: "Firewall Bypass",
+                        description: "Bypass network restrictions and access blocked services."
+                    },
+                    {
+                        title: "Penetration Testing",
+                        description: "Establish covert communication channels during security assessments."
+                    }
+                ],
+                warning: "Only use Chisel for authorized network tunneling. Unauthorized network access may violate security policies and laws."
+            },
+            "ligolo-ng": {
+                title: "Ligolo-ng",
+                category: "Advanced Tunneling",
+                description: "Ligolo-ng is a simple, lightweight and fast tool that allows pentesters to establish tunnels from a reverse TCP/TLS connection.",
+                features: [
+                    "TUN interface tunneling",
+                    "Multiple agent support",
+                    "Traffic routing capabilities",
+                    "TLS encryption",
+                    "Cross-platform agents",
+                    "Network pivoting"
+                ],
+                installation: "# Download from github.com/nicocha30/ligolo-ng\n# Pre-compiled binaries available\n# Requires TUN interface setup",
+                basicCommands: [
+                    "sudo ip tuntap add user $(whoami) mode tun ligolo  # Create TUN interface",
+                    "sudo ip link set ligolo up  # Bring interface up",
+                    "./proxy -selfcert  # Start proxy with self-signed cert",
+                    "./agent -connect proxy_ip:11601 -ignore-cert  # Connect agent",
+                    "session  # Start tunneling session"
+                ],
+                useCases: [
+                    {
+                        title: "Network Pivoting",
+                        description: "Route traffic through compromised systems to access internal networks."
+                    },
+                    {
+                        title: "Lateral Movement",
+                        description: "Move between network segments during penetration testing."
+                    },
+                    {
+                        title: "Red Team Operations",
+                        description: "Establish persistent network access for extended operations."
+                    }
+                ],
+                warning: "Only use Ligolo-ng on networks you own or have explicit permission to access. Unauthorized tunneling is illegal."
+            },
+            // Mobile Forensics Tools
+            autopsy: {
+                title: "Autopsy",
+                category: "Digital Forensics Platform",
+                description: "Autopsy is a digital forensics platform and graphical interface to The Sleuth Kit and other digital forensics tools.",
+                features: [
+                    "Timeline analysis",
+                    "Hash filtering and lookup",
+                    "Keyword searching",
+                    "Web artifacts extraction",
+                    "Registry analysis",
+                    "Email analysis"
+                ],
+                installation: "# Download from sleuthkit.org/autopsy\n# Windows installer available\n# Linux version requires compilation",
+                basicCommands: [
+                    "Create new case in GUI",
+                    "Add data source (disk image, files)",
+                    "Run ingest modules for analysis",
+                    "Browse results in tree view",
+                    "Generate reports for findings"
+                ],
+                useCases: [
+                    {
+                        title: "Digital Forensic Investigations",
+                        description: "Analyze digital evidence from computers and mobile devices."
+                    },
+                    {
+                        title: "Incident Response",
+                        description: "Investigate security incidents and data breaches."
+                    },
+                    {
+                        title: "Legal Investigations",
+                        description: "Support legal proceedings with digital evidence analysis."
+                    }
+                ],
+                warning: "Only use Autopsy on systems and data you own or have legal authority to analyze. Unauthorized forensic analysis may be illegal."
+            },
+            volatility: {
+                title: "Volatility",
+                category: "Memory Forensics",
+                description: "Volatility is an advanced memory forensics framework for incident response and malware analysis.",
+                features: [
+                    "Memory dump analysis",
+                    "Process and network analysis",
+                    "Malware detection",
+                    "Registry extraction",
+                    "Timeline reconstruction",
+                    "Plugin architecture"
+                ],
+                installation: "pip install volatility3\n# Or download from volatilityfoundation.org\ngit clone https://github.com/volatilityfoundation/volatility3.git",
+                basicCommands: [
+                    "vol.py -f memory.dmp windows.info  # System information",
+                    "vol.py -f memory.dmp windows.pslist  # List processes",
+                    "vol.py -f memory.dmp windows.netscan  # Network connections",
+                    "vol.py -f memory.dmp windows.malfind  # Detect malware",
+                    "vol.py -f memory.dmp windows.dumpfiles  # Extract files"
+                ],
+                useCases: [
+                    {
+                        title: "Malware Analysis",
+                        description: "Analyze memory dumps to identify and understand malware behavior."
+                    },
+                    {
+                        title: "Incident Response",
+                        description: "Investigate security incidents through memory analysis."
+                    },
+                    {
+                        title: "Digital Forensics",
+                        description: "Extract evidence from system memory during forensic investigations."
+                    }
+                ],
+                warning: "Only analyze memory dumps you own or have legal authority to examine. Unauthorized memory analysis may violate privacy laws."
+            },
+            sleuthkit: {
+                title: "The Sleuth Kit",
+                category: "Digital Investigation Tools",
+                description: "The Sleuth Kit is a collection of command line tools and a C library that allows you to analyze disk images and recover files.",
+                features: [
+                    "File system analysis",
+                    "Timeline creation",
+                    "Deleted file recovery",
+                    "Metadata analysis",
+                    "Hash database support",
+                    "Multiple file system support"
+                ],
+                installation: "sudo apt-get install sleuthkit  # Ubuntu/Debian\nbrew install sleuthkit  # macOS\n# Compile from source for latest features",
+                basicCommands: [
+                    "mmls disk.img  # List partitions",
+                    "fsstat -o 2048 disk.img  # File system information",
+                    "fls -o 2048 disk.img  # List files and directories",
+                    "icat -o 2048 disk.img 1234  # Extract file by inode",
+                    "mactime -b body.txt -d > timeline.csv  # Create timeline"
+                ],
+                useCases: [
+                    {
+                        title: "Digital Forensics",
+                        description: "Analyze disk images and file systems for forensic investigations."
+                    },
+                    {
+                        title: "Data Recovery",
+                        description: "Recover deleted files and analyze file system structures."
+                    },
+                    {
+                        title: "Incident Response",
+                        description: "Investigate compromised systems and extract evidence."
+                    }
+                ],
+                warning: "Only use The Sleuth Kit on systems and data you own or have legal authority to analyze."
+            },
+            binwalk: {
+                title: "Binwalk",
+                category: "Firmware Analysis",
+                description: "Binwalk is a fast, easy to use tool for analyzing, reverse engineering, and extracting firmware images.",
+                features: [
+                    "Firmware signature analysis",
+                    "File extraction capabilities",
+                    "Entropy analysis",
+                    "Hexdump functionality",
+                    "Recursive extraction",
+                    "Custom signature support"
+                ],
+                installation: "sudo apt-get install binwalk  # Ubuntu/Debian\npip install binwalk  # Python pip\ngit clone https://github.com/ReFirmLabs/binwalk.git",
+                basicCommands: [
+                    "binwalk firmware.bin  # Analyze firmware",
+                    "binwalk -e firmware.bin  # Extract files",
+                    "binwalk -E firmware.bin  # Entropy analysis",
+                    "binwalk -A firmware.bin  # Opcode analysis",
+                    "binwalk --dd='.*' firmware.bin  # Extract all files"
+                ],
+                useCases: [
+                    {
+                        title: "Firmware Security Analysis",
+                        description: "Analyze IoT and embedded device firmware for vulnerabilities."
+                    },
+                    {
+                        title: "Reverse Engineering",
+                        description: "Extract and analyze components from firmware images."
+                    },
+                    {
+                        title: "Malware Analysis",
+                        description: "Analyze suspicious firmware and embedded malware."
+                    }
+                ],
+                warning: "Only analyze firmware you own or have permission to examine. Reverse engineering may violate licensing agreements."
+            },
+            foremost: {
+                title: "Foremost",
+                category: "File Carving",
+                description: "Foremost is a console program to recover files based on their headers, footers, and internal data structures.",
+                features: [
+                    "File signature-based recovery",
+                    "Multiple file format support",
+                    "Configurable file types",
+                    "Disk image analysis",
+                    "Deleted file recovery",
+                    "Fragmented file handling"
+                ],
+                installation: "sudo apt-get install foremost  # Ubuntu/Debian\nbrew install foremost  # macOS\n# Available in most Linux repositories",
+                basicCommands: [
+                    "foremost -i disk.img -o output/  # Basic file carving",
+                    "foremost -t jpg,png -i disk.img -o images/  # Specific file types",
+                    "foremost -v -i disk.img -o output/  # Verbose output",
+                    "foremost -c custom.conf -i disk.img -o output/  # Custom config",
+                    "foremost -a -i disk.img -o output/  # All file types"
+                ],
+                useCases: [
+                    {
+                        title: "Data Recovery",
+                        description: "Recover deleted files from disk images and storage devices."
+                    },
+                    {
+                        title: "Digital Forensics",
+                        description: "Extract files from corrupted or damaged storage media."
+                    },
+                    {
+                        title: "Evidence Collection",
+                        description: "Recover digital evidence during forensic investigations."
+                    }
+                ],
+                warning: "Only use Foremost on storage devices you own or have legal authority to analyze."
+            },
+            hashcat: {
+                title: "Hashcat",
+                category: "Advanced Password Recovery",
+                description: "Hashcat is the world's fastest and most advanced password recovery utility, supporting five unique modes of attack.",
+                features: [
+                    "GPU acceleration support",
+                    "300+ hash algorithms",
+                    "Multiple attack modes",
+                    "Rule-based attacks",
+                    "Distributed cracking",
+                    "Session management"
+                ],
+                installation: "sudo apt-get install hashcat  # Ubuntu/Debian\nbrew install hashcat  # macOS\n# Download from hashcat.net",
+                basicCommands: [
+                    "hashcat -m 0 hashes.txt wordlist.txt  # MD5 dictionary attack",
+                    "hashcat -m 1000 hashes.txt wordlist.txt  # NTLM attack",
+                    "hashcat -a 3 -m 0 hash.txt ?a?a?a?a?a?a  # Brute force",
+                    "hashcat -m 0 hashes.txt wordlist.txt -r rules/best64.rule  # Rule-based",
+                    "hashcat --show hashes.txt  # Show cracked passwords"
+                ],
+                useCases: [
+                    {
+                        title: "Password Security Testing",
+                        description: "Test password strength and organizational password policies."
+                    },
+                    {
+                        title: "Digital Forensics",
+                        description: "Recover passwords from seized systems during investigations."
+                    },
+                    {
+                        title: "Penetration Testing",
+                        description: "Crack captured password hashes during security assessments."
+                    }
+                ],
+                warning: "Only use Hashcat on password hashes you own or have permission to crack. Unauthorized password cracking is illegal."
+            },
+            exiftool: {
+                title: "ExifTool",
+                category: "Metadata Extraction",
+                description: "ExifTool is a platform-independent Perl application for reading, writing and editing meta information in a wide variety of files.",
+                features: [
+                    "500+ file format support",
+                    "Metadata reading and writing",
+                    "GPS coordinate extraction",
+                    "Timestamp analysis",
+                    "Batch processing",
+                    "Custom tag definitions"
+                ],
+                installation: "sudo apt-get install exiftool  # Ubuntu/Debian\nbrew install exiftool  # macOS\n# Download from exiftool.org",
+                basicCommands: [
+                    "exiftool image.jpg  # View all metadata",
+                    "exiftool -GPS* image.jpg  # GPS information only",
+                    "exiftool -CreateDate image.jpg  # Creation date",
+                    "exiftool -all= image.jpg  # Remove all metadata",
+                    "exiftool -r -ext jpg /path/to/directory/  # Recursive analysis"
+                ],
+                useCases: [
+                    {
+                        title: "Digital Forensics",
+                        description: "Extract metadata from digital files for forensic analysis."
+                    },
+                    {
+                        title: "OSINT Investigations",
+                        description: "Gather intelligence from publicly available images and documents."
+                    },
+                    {
+                        title: "Privacy Analysis",
+                        description: "Identify sensitive information embedded in file metadata."
+                    }
+                ],
+                warning: "Be aware of privacy implications when analyzing metadata. Only examine files you own or have permission to analyze."
+            },
+            strings: {
+                title: "Strings",
+                category: "Text Extraction",
+                description: "Strings finds and prints the printable character sequences that are at least 4 characters long in files.",
+                features: [
+                    "ASCII and Unicode string extraction",
+                    "Minimum length specification",
+                    "Offset information",
+                    "Multiple file processing",
+                    "Regular expression filtering",
+                    "Binary file analysis"
+                ],
+                installation: "# Pre-installed on most Unix systems\nsudo apt-get install binutils  # Ubuntu/Debian\nbrew install binutils  # macOS",
+                basicCommands: [
+                    "strings binary_file  # Extract strings",
+                    "strings -n 8 binary_file  # Minimum 8 characters",
+                    "strings -o binary_file  # Show offsets",
+                    "strings -a binary_file  # Scan entire file",
+                    "strings binary_file | grep -i password  # Find passwords"
+                ],
+                useCases: [
+                    {
+                        title: "Malware Analysis",
+                        description: "Extract readable strings from malware samples for analysis."
+                    },
+                    {
+                        title: "Reverse Engineering",
+                        description: "Find embedded strings in binary files and executables."
+                    },
+                    {
+                        title: "Digital Forensics",
+                        description: "Extract text data from binary files during investigations."
+                    }
+                ],
+                warning: "Strings analysis may reveal sensitive information. Handle extracted data appropriately and securely."
+            },
+            steghide: {
+                title: "Steghide",
+                category: "Steganography",
+                description: "Steghide is a steganography program that hides data in various kinds of image and audio files.",
+                features: [
+                    "JPEG, BMP, WAV, AU file support",
+                    "Encryption of embedded data",
+                    "Compression capabilities",
+                    "Passphrase protection",
+                    "Checksum verification",
+                    "Multiple embedding algorithms"
+                ],
+                installation: "sudo apt-get install steghide  # Ubuntu/Debian\nbrew install steghide  # macOS\n# Available in most Linux repositories",
+                basicCommands: [
+                    "steghide embed -cf image.jpg -ef secret.txt  # Hide file",
+                    "steghide extract -sf image.jpg  # Extract hidden data",
+                    "steghide info image.jpg  # Check for hidden data",
+                    "steghide embed -cf image.jpg -ef secret.txt -p password  # With password",
+                    "steghide extract -sf image.jpg -p password  # Extract with password"
+                ],
+                useCases: [
+                    {
+                        title: "Digital Forensics",
+                        description: "Detect and extract hidden data from image and audio files."
+                    },
+                    {
+                        title: "Security Research",
+                        description: "Study steganographic techniques and detection methods."
+                    },
+                    {
+                        title: "Data Hiding Detection",
+                        description: "Investigate suspected steganographic content in digital media."
+                    }
+                ],
+                warning: "Only use steganography tools on files you own or have permission to analyze. Unauthorized data hiding may be illegal."
+            },
+            photorec: {
+                title: "PhotoRec",
+                category: "File Recovery",
+                description: "PhotoRec is file data recovery software designed to recover lost files from hard disks, CD-ROMs and lost pictures from digital camera memory.",
+                features: [
+                    "480+ file format recovery",
+                    "Raw disk access",
+                    "Cross-platform compatibility",
+                    "Undelete capabilities",
+                    "Damaged partition recovery",
+                    "Digital camera support"
+                ],
+                installation: "sudo apt-get install testdisk  # Includes PhotoRec\nbrew install testdisk  # macOS\n# Download from cgsecurity.org",
+                basicCommands: [
+                    "photorec  # Start interactive mode",
+                    "photorec /log /d recovery_dir /dev/sdb1  # Command line recovery",
+                    "Select disk and partition in interactive mode",
+                    "Choose file types to recover",
+                    "Specify output directory for recovered files"
+                ],
+                useCases: [
+                    {
+                        title: "Data Recovery",
+                        description: "Recover deleted files from storage devices and memory cards."
+                    },
+                    {
+                        title: "Digital Forensics",
+                        description: "Recover evidence from damaged or corrupted storage media."
+                    },
+                    {
+                        title: "Incident Response",
+                        description: "Recover files from systems affected by malware or attacks."
+                    }
+                ],
+                warning: "Only use PhotoRec on storage devices you own or have legal authority to recover data from."
             }
         };
 
@@ -1506,7 +2717,7 @@
         const popupBody = document.getElementById('popupBody');
         const toolTitle = document.getElementById('toolTitle');
         const toolCategory = document.getElementById('toolCategory');
-        const toolLinks = document.querySelectorAll('.tool-link');
+        const toolCards = document.querySelectorAll('.tool-card');
         
         // Close popup when clicking X
         closePopup.addEventListener('click', () => {
@@ -1527,11 +2738,11 @@
             }
         });
         
-        // Tool link click handlers with detailed information
-        toolLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
+        // Tool card click handlers with detailed information
+        toolCards.forEach(card => {
+            card.addEventListener('click', (e) => {
                 e.preventDefault();
-                const tool = link.getAttribute('data-tool');
+                const tool = card.getAttribute('data-tool');
                 const toolData = toolsData[tool];
                 
                 if (toolData) {
@@ -1620,9 +2831,8 @@
                 }
             });
         });
-
-        // Scroll animations
-        const observerOptions = {
+// Scroll animations
+const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
@@ -1651,5 +2861,10 @@
             
         });
     </script>
-</body>
-</html>
+    </body>
+    </html>
+
+    <!-- dark+light theam -->
+
+
+
